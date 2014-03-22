@@ -2,9 +2,9 @@
 
 see http://shoheik.hatenablog.com/entry/2014/03/05/073232
 
-This cookbook does below as root
-
 require git
+
+This cookbook does below as root:
 
 ```
 export PLENV_ROOT=/opt/plenv
