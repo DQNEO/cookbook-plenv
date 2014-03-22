@@ -35,10 +35,10 @@ end
 bash "install cpan modules" do
   environment 'PLENV_ROOT' => "#{node['plenv_root']}"
   code <<-EOC
-        #{node['plenv_root']}/shims/cpanm Acme::Nyaa
+        #{node['plenv_root']}/shims/cpanm Plack
    EOC
   action :run
-  creates "/opt/plenv/versions/#{node['perl_version']}/lib/perl5/site_perl/#{node['perl_version']}/Acme/Nyaa.pm"
+  creates "/opt/plenv/versions/#{node['perl_version']}/lib/perl5/site_perl/#{node['perl_version']}/Plack.pm"
 end
 
 =begin
