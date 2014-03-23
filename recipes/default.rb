@@ -38,7 +38,7 @@ bash "install cpan modules" do
         #{node['plenv_root']}/shims/cpanm Mo
    EOC
   action :run
-  creates "/opt/plenv/versions/#{node['perl_version']}/lib/perl5/site_perl/#{node['perl_version']}/Mo.pm"
+  creates "#{node['plenv_root']}/versions/#{node['perl_version']}/lib/perl5/site_perl/#{node['perl_version']}/Mo.pm"
 end
 
 =begin
