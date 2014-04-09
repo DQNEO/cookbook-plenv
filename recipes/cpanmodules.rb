@@ -11,7 +11,7 @@ Data::Recursive::Encode
 File::Touch
 Time::HiRes
 }.each do |name|
-    bash "install cpan modules" do
+    bash "install cpan module #{name}" do
       code <<-EOC
         #{node['plenv_root']}/shims/cpanm #{name}
         #{node['plenv_root']}/bin/plenv rehash
