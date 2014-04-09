@@ -1,4 +1,4 @@
-node['default']['cpanmodules'].each do |name|
+node['cpanmodules'].each do |name|
     bash "install cpan module #{name}" do
       code <<-EOC
         #{node['plenv_root']}/shims/cpanm #{name}
